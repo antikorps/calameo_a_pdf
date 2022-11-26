@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>Calaméo a PDF</title>
+    <style>
+        textarea {
+            height: 100%;
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/index.50d16403.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Calaméo a PDF</h1>
+        <p>Respalda tus publicaciones subidas a Calaméo en archivos PDF. Pon cada URL en una línea nueva, recuerda que
+            debe enlazar directamente al libro digital (incluyendo /read/ en la dirección).</p>
+        <form>
+            <div class="grid">
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <label for="numero-descargas">
+                        Número máximo de descargas simultáneas:
+                        <input type="number" id="numero-descargas" name="numero-descargas"
+                            placeholder="Número máximo descargas simultáneas" required value="3">
+                    </label>
+                    <label for="tiempo-espera">
+                        Segundos de espera entre intervalo de peticiones:
+                        <input type="number" id="tiempo-espera" name="tiempo-espera"
+                            placeholder="Espera entre intervalo de peticiones" required value="0">
+                    </label>
+
+                    <label for="carpeta-destino">
+                        <button type="text" name="carpeta-destino" id="carpeta-destino">Carpeta destino</button>
+                    </label>
+
+                    <button type="submit" id="generar">Generar PDF</button>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <div id="resumen">
+        </div>
+    </main>
+    
+</body>
+
+</html>
